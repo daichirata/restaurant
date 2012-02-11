@@ -17,7 +17,7 @@ module Clerk
 
       respond_to do |format|
         if osinagaki.save
-          format.html { redirect_to root, notice: 'Osinagaki was successfully created.' }
+          format.html { redirect_to root_path, notice: 'Osinagaki was successfully created.' }
         else
           format.html { render action: "index" }
         end
@@ -30,7 +30,7 @@ module Clerk
       end
 
       respond_to do |format|
-        format.html { redirect_to osinagakis_url }
+        format.html { redirect_to root_path, notice: 'Osinagaki was successfully deleted.' }
       end
     end
   end
