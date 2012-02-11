@@ -110,6 +110,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler (~> 1.0.7)
   chanko!
   coffee-rails (~> 3.2.1)
   jquery-rails
