@@ -17,7 +17,7 @@ module Clerk
 
       respond_to do |format|
         if osinagaki.save
-          format.html { redirect_to osinagaki, notice: 'Osinagaki was successfully created.' }
+          format.html { redirect_to root, notice: 'Osinagaki was successfully created.' }
         else
           format.html { render action: "index" }
         end
