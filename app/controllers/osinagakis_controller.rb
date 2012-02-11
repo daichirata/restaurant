@@ -1,12 +1,6 @@
 class OsinagakisController < ApplicationController
   ext_action(:clerk, :switch) do
-     if session['type'] == 'guest'
-       user_type = 'clerk'
-     else
-       user_type = 'guest'
-     end
-    session['type'] = user_type
-
+    session['type'] = 'clerk'
     redirect_to root_path
   end
 
