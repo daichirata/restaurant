@@ -7,6 +7,11 @@ module Clerk
   end
 
   scope(:controller) do
+    callback(:switch) do
+      session['type'] = 'guest'
+      redirect_to root_path
+    end
+
     callback(:create) do
       osinagaki = Osinagaki.new(params[:osinagaki])
 
