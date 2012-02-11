@@ -1,0 +1,13 @@
+<%= form_for(osinagaki) do |f| %>
+  <div class="field">
+    <%= f.label :menu %><br />
+    <%= f.text_field :menu %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.number_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit :class => 'btn' %>
+  </div>
+<% end %>

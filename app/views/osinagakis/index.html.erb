@@ -1,0 +1,29 @@
+<h1>Listing osinagakis</h1>
+
+<br />
+
+<%= invoke(:clerk, :switch) { link_to('店員に切り替え', '/osinagakis/switch') } %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th style="width:40%;">Menu</th>
+      <th style="width:40%;">Price</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @osinagakis.each do |osinagaki| %>
+      <tr>
+        <td style="font-size:130%;"><%= osinagaki.menu %></td>
+        <td style="font-size:130%;"><%= osinagaki.price %></td>
+        <td><%= invoke(:clerk, :delete_button, :locals => {:osinagaki => osinagaki}) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= invoke(:clerk, :create_form) %>

@@ -1,0 +1,2 @@
+module OsinagakisHelper
+end
